@@ -18,6 +18,13 @@ import java.util.concurrent.Callable;
         description = "Compares two configuration files and shows a difference.")
 
 public final class App implements Callable {
+    @Parameters(paramLabel = "filepath1", description = "path to first file")
+    private static String filepath1;
+    @Parameters(paramLabel = "filepath2", description = "path to second file")
+    private static String filepath2;
+    @CommandLine.Option(names = {"-f", "--format"}, description = "output format [default: stylish]", defaultValue = "stylish")
+    private static String format;
+
     @Override
     public Integer call() throws Exception { // your business logic goes here...
         return null;
