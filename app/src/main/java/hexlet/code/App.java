@@ -26,7 +26,8 @@ public final class App implements Callable {
     private static String format;
 
     @Override
-    public Integer call() throws Exception { // your business logic goes here...
+    public Integer call() throws Exception {
+        System.out.println(Differ.generate(filepath1, filepath2));
         return null;
     }
 
